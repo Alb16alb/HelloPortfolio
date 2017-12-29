@@ -5,8 +5,8 @@ $.getJSON("data/populations.json", function(jsonData){
   // TODO
   // populate colData
   for(var i = 0; i < jsonData.USA.length; i++){
-  		var ar = [jsonData.USA[i].age,jsonData.USA[i].value]
-  		colData.push(ar);
+	var ac = [jsonData.USA[i].age[0] + jsonData.USA[i].age[1] + "-" + jsonData.USA[i].age[2] + jsonData.USA[i].age[3], jsonData.USA[i].value];
+  	colData.push(ac);
   }
 	chart = c3.generate({
 		bindto: "#population-chart",
